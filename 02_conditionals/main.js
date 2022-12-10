@@ -33,7 +33,7 @@ let die2 = Math.floor(Math.random() * 6 + 1);
 let isTotalEven = (die1 + die2) % 2 === 0;
 // if both are six win top prize
 if (die1 === 6 && die2 === 6) {
-  prompt(`You get top prize as you rolled ${die1} and ${die2}.\n
+  alert(`You get top prize as you rolled ${die1} and ${die2}.\n
     You win a bear!`);
 } else if (die1 === die2) {
   // if both die equal one another, 3 free throws
