@@ -51,7 +51,7 @@ function humanToDogYears(humanAge, name) {
   // divide by 5 for each subsequent year
   // and cut any decimal points off
   let remainingDogYears = parseInt(humanAge / 5);
-  console.log('remaining dog years: ' + remainingDogYears);
+  //console.log('remaining dog years: ' + remainingDogYears);
   dogYears += remainingDogYears;
   // return the number
   return `${name}'s age (${displayAge}) in dog years: ${dogYears}`;
