@@ -113,3 +113,38 @@ function calculator(num1, operator, num2) {
 }
 
 console.log('Calculate: ' + calculator(4, '+', 10));
+
+/***
+ * Function 7: min
+ * 
+ * @param {number} a Any number
+ * @param {number} b Another number
+ * 
+ * @return {number} a or b, the smallest number
+ */
+function min(a, b) {
+  if (a === b) {
+    return a;
+  } else if (a > b) {
+    return b;
+  } else {
+    return a;
+  }
+}
+
+console.log('Min number: ' + min(-100, 10));
+
+/***
+ * Function 8: pow(x, n)
+ * 
+ * @param {number} x The number to raise to the power of.
+ * @param {number} n Exponent number (x=2, n=3 would be: 2 * 2 * 2)
+ * 
+ * @return {number} result of the equation
+ */
+function pow(x, n) {
+  let result = x ** n;
+  return result;
+}
+
+console.log('Power: ' + pow(1.65, 30));
