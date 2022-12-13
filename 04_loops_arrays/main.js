@@ -80,9 +80,66 @@ for (let i = 0; i < tasks.length; i++) {
 }
 
 // exercise 3
-let i = 3;
-while (i) {
-  // should run until 0 (falsy value)
-  alert(i--);
+// let i = 3;
+// while (i) {
+//   // should run until 0 (falsy value)
+//   alert(i--);
+// }
+
+// exercise 4
+const paragraph = document.createElement('p');
+const exerciseDiv4 = document.querySelector('#loops-ex-4');
+exerciseDiv4.appendChild(paragraph);
+
+for (let even = 2; even <= 10; even += 2) {
+  paragraph.innerHTML += even + '   ';
 }
 
+// exercise 5: replace for with while
+// Original: 
+// for (let x = 0; x < 3; x++) {
+//   alert(`Number ${x}!`);
+// }
+let x = 0;
+while (x < 3) {
+  alert(`number ${x}!`);
+  // don't forget this, otherwise will be an infinite loop
+  x++;
+}
+
+// exercise 6
+/**
+ * @param {array} array of numbers
+ * @return {number} sum of the array
+ */
+function sumInput(numberArr) {
+  let result = 0;
+  for (let i = 0; i < numberArr.length; i++) {
+    if (typeof(numberArr[i]) !== 'number') {
+      // go to next iteration of loop
+      continue;
+    } else {
+      result += numberArr[i];
+    }
+  }
+  return result;
+}
+
+const sumInputTag = document.querySelector('#sumInput');
+sumInputTag.innerHTML += sumInput([1, '2', 3, 4, 10, 9]);
+
+function meanAvg(numberArr) {
+  let result = 0;
+  for (let i = 0; i < numberArr.length; i++) {
+    if (typeof(numberArr[i]) !== 'number') {
+      // go to next iteration of loop
+      continue;
+    } else {
+      result += numberArr[i];
+    }
+  }
+  return result / numberArr.length;
+}
+
+const avgInputTag = document.querySelector('#meanAvg');
+avgInputTag.innerHTML += meanAvg([1, '2', 3, 4, 10, 9]);
